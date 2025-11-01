@@ -1,0 +1,39 @@
+1️⃣ Template String
+
+Definition: Template strings (also called template literals) are a way to create strings in JavaScript that allow embedding variables and expressions directly inside the string using ${}. They are enclosed with backticks ` instead of quotes.
+
+const firstName = "Maruf";
+const lastName = "Hasan";
+console.log(`My name is ${firstName} ${lastName}`);
+// Output: My name is Maruf Hasan
+
+
+Here, ${firstName} and ${lastName} are placeholders that get replaced with the actual variable values.
+
+2️⃣ Arrow Function
+
+Definition: Arrow functions provide a shorter syntax to write functions in JavaScript. They are anonymous functions and do not have their own this.
+
+const sum = (a, b) => a + b;
+console.log(sum(8, 6));
+// Output: 14
+
+
+Here, (a, b) => a + b is equivalent to:
+
+function sum(a, b) {
+  return a + b;
+}
+
+3️⃣ Spread Operator
+
+Definition: The spread operator ... allows an iterable (like an array or object) to be expanded into individual elements. It’s often used to merge arrays, copy arrays, or pass elements as arguments.
+
+const number = [1, 5, 9, 6, 4, 7, 3];
+const newNumbers = [100, 65, 98, 36];
+const finalNumber = [...newNumbers, ...number];
+console.log(finalNumber);
+// Output: [100, 65, 98, 36, 1, 5, 9, 6, 4, 7, 3]
+
+
+Here, [...newNumbers, ...number] combines the two arrays into a single array without modifying the original arrays.
