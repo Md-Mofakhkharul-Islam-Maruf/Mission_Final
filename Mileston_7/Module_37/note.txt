@@ -1,6 +1,9 @@
-1️⃣ Template String
+1️⃣ Template String (Template Literal)
 
-Definition: Template strings (also called template literals) are a way to create strings in JavaScript that allow embedding variables and expressions directly inside the string using ${}. They are enclosed with backticks ` instead of quotes.
+Real Definition:
+Template strings (or template literals) are strings that allow embedded expressions, multi-line text, and interpolation in JavaScript. They are enclosed in backticks ` and can include variables or expressions inside ${}.
+
+Example:
 
 const firstName = "Maruf";
 const lastName = "Hasan";
@@ -8,18 +11,27 @@ console.log(`My name is ${firstName} ${lastName}`);
 // Output: My name is Maruf Hasan
 
 
-Here, ${firstName} and ${lastName} are placeholders that get replaced with the actual variable values.
+${firstName} and ${lastName} are placeholders that dynamically insert variable values.
 
 2️⃣ Arrow Function
 
-Definition: Arrow functions provide a shorter syntax to write functions in JavaScript. They are anonymous functions and do not have their own this.
+Real Definition:
+An arrow function is a concise syntax for writing functions in JavaScript using =>. Unlike traditional functions, arrow functions:
+
+Can have an implicit return for single expressions.
+
+Do not have their own this, so this refers to the surrounding lexical context.
+
+Cannot be used as constructors with new.
+
+Example:
 
 const sum = (a, b) => a + b;
-console.log(sum(8, 6));
+console.log(sum(8, 6)); 
 // Output: 14
 
 
-Here, (a, b) => a + b is equivalent to:
+Equivalent traditional function:
 
 function sum(a, b) {
   return a + b;
@@ -27,13 +39,22 @@ function sum(a, b) {
 
 3️⃣ Spread Operator
 
-Definition: The spread operator ... allows an iterable (like an array or object) to be expanded into individual elements. It’s often used to merge arrays, copy arrays, or pass elements as arguments.
+Real Definition:
+The spread operator ... allows an iterable (like an array or object) to be expanded into individual elements. It is commonly used to:
 
-const number = [1, 5, 9, 6, 4, 7, 3];
+Merge arrays or objects
+
+Copy arrays or objects
+
+Pass elements as separate arguments to functions
+
+Example:
+
+const numbers = [1, 5, 9, 6, 4, 7, 3];
 const newNumbers = [100, 65, 98, 36];
-const finalNumber = [...newNumbers, ...number];
+const finalNumber = [...newNumbers, ...numbers];
 console.log(finalNumber);
 // Output: [100, 65, 98, 36, 1, 5, 9, 6, 4, 7, 3]
 
 
-Here, [...newNumbers, ...number] combines the two arrays into a single array without modifying the original arrays.
+[...newNumbers, ...numbers] merges the two arrays without modifying the originals.
