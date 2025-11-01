@@ -1,0 +1,49 @@
+1️⃣ map()
+
+Definition:
+map() is used to transform each element of an array and create a new array of the same length without changing the original array.
+
+Example:
+
+const mapResult = products.map(product => product.name)
+console.log(mapResult)
+// Output: ["redmi", "samsung", "vivo", "oppo"]
+
+
+Explanation:
+Here, we extracted the name of each product, creating a new array of product names.
+
+2️⃣ filter()
+
+Definition:
+filter() is used to select elements from an array that satisfy a given condition, returning a new array of any length.
+
+Example:
+
+const filterResult = products.filter(product => product.price <= 5000)
+console.log(filterResult)
+// Output:
+// [
+//   { name: 'samsung', price: 5000, color: 'black' },
+//   { name: 'vivo', price: 1000, color: 'maroon' },
+//   { name: 'oppo', price: 3000, color: 'golden' }
+// ]
+
+
+Explanation:
+Here, we filtered products with a price less than or equal to 5000, returning a new array of only those products.
+
+3️⃣ find()
+
+Definition:
+find() is used to locate the first element in an array that meets a specific condition. It returns the element itself, not an array.
+
+Example:
+
+const findResult = products.find(product => product.name === 'vivo')
+console.log(findResult)
+// Output: { name: 'vivo', price: 1000, color: 'maroon' }
+
+
+Explanation:
+Here, find returned the first product whose name is 'vivo'.
