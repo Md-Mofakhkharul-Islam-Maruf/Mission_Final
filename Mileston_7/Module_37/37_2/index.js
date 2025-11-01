@@ -50,3 +50,4 @@ console.log(friends.name)
 console.log(friends.time[2])
 friends.name = 'Rakib'
 console.log(friends.name)
+console.log(friends)
