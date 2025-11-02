@@ -1,0 +1,144 @@
+✅ 1. Truthy & Falsy Values
+🔹 Definition:
+
+In JavaScript, all values are either truthy (evaluates to true) or falsy (evaluates to false) when used in a boolean context.
+
+🔹 Example Breakdown:
+
+const test = {}
+test ? console.log('truthy') : console.log('falsy')
+// Output: 'truthy'
+
+const test2 = 0
+'' ? console.log('truthy') : console.log('falsy')
+// Output: 'falsy'
+
+
+✔ {} is a truthy value → if block runs
+✔ 0 and '' are falsy → else block runs
+
+const status = false
+const showUser = () => console.log("Show the user")
+const hideUser = () => console.log('Hide the user')
+status ? showUser() : hideUser()
+// Output: 'Hide the user'
+
+
+✔ Conditional operator chooses which function to run
+
+status && showUser()
+status || hideUser()
+// Output: 'Hide the user'
+
+
+✔ && runs function if truthy, || runs function if falsy
+
+✅ Merits:
+
+Simplifies conditional statements
+➡ Can use if(value) or &&/|| shorthand.
+
+Works for all types of values
+➡ Arrays, objects, strings, numbers, functions.
+
+Reduces verbose code
+➡ Avoids explicit comparisons like value !== 0.
+
+❌ Demerits:
+
+Can confuse beginners
+➡ '0' is truthy but 0 is falsy.
+
+Automatic type coercion may cause bugs
+➡ Using || and && may produce unexpected results.
+
+Hidden bugs in logic
+➡ Empty arrays and objects are truthy even if logically “empty”.
+
+✅ 2. String → Number Conversion
+🔹 Definition:
+
+Converts a string containing numeric characters into a number using parseInt(), parseFloat(), or Number().
+
+🔹 Example Breakdown:
+
+const str = '10'
+console.log(typeof(str))       // "string"
+console.log(parseInt(str))     // 10
+
+
+✔ '10' (string) is converted to 10 (number)
+
+✅ Merits:
+
+Enables arithmetic operations
+➡ Can add, subtract, or multiply numbers.
+
+Works for integer and float strings
+➡ parseInt for integers, parseFloat for decimals.
+
+❌ Demerits:
+
+Invalid strings return NaN
+➡ parseInt('abc') → NaN.
+
+May ignore decimal part if using parseInt
+➡ '10.5' → 10.
+
+✅ 3. Number → String Conversion
+🔹 Definition:
+
+Converts a number into string using String(), toString(), template literals, or concatenation.
+
+🔹 Example Breakdown:
+
+const num = 20
+console.log(typeof(num))       // "number"
+console.log(String(num))       // "20"
+
+
+✔ Converts number 20 into string "20"
+
+✅ Merits:
+
+Useful for displaying numbers as text
+
+Easy concatenation with other strings
+
+Multiple methods available
+
+❌ Demerits:
+
+Arithmetic operations may fail
+➡ "10" + 1 → "101"
+
+Implicit conversions may confuse beginners
+
+✅ 4. Type Coercion
+🔹 Definition:
+
+Type coercion is JavaScript automatically converting one data type to another (string, number, boolean) in expressions.
+
+🔹 Example Breakdown:
+
+console.log('10' - 5)   // 5  → string coerced to number
+console.log('10' + 5)   // "105" → number coerced to string
+console.log(!!0)        // false → number coerced to boolean
+
+
+✔ - triggers numeric conversion
+✔ + triggers string concatenation
+✔ !! converts value to boolean
+
+✅ Merits:
+
+Makes expressions flexible
+
+Reduces need for explicit conversions
+
+❌ Demerits:
+
+Can cause unexpected results
+➡ '10' + 5 → "105" not 15
+
+Hard to debug when multiple types are mixed
