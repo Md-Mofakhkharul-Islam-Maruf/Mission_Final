@@ -1,0 +1,136 @@
+✅ 1. JSON.stringify() – Convert Object to JSON
+📌 Definition:
+
+JSON.stringify() converts a JavaScript object into a JSON-formatted string.
+
+📌 Your Example Breakdown:
+const person = {
+    name: 'Maruf Hasan',
+    age: 25,
+    country: {
+        a: 'bangladesh',
+        b: 'usa'
+    }
+}
+const jsonData = JSON.stringify(person)
+console.log(jsonData)
+
+
+✔ Converts the person object into a string like:
+{"name":"Maruf Hasan","age":25,"country":{"a":"bangladesh","b":"usa"}}
+
+✅ Merits:
+
+Easy to send data to a server
+➡ JSON string is ideal for APIs and HTTP requests.
+
+Makes data storage simple
+➡ Can store JSON strings in localStorage, files, or databases.
+
+❌ Demerits:
+
+Functions or methods are removed
+➡ JSON only supports data, not functions.
+
+Becomes unreadable if object is very large
+➡ Hard to manually understand long JSON strings.
+
+✅ 2. JSON.parse() – Convert JSON string to Object
+📌 Definition:
+
+JSON.parse() converts a JSON-formatted string back into a normal JavaScript object.
+
+📌 Your Example Breakdown:
+const plainData = JSON.parse(jsonData)
+console.log(plainData)
+
+
+✔ Converts the JSON string back into a normal object.
+✔ Output is same structure as person.
+
+✅ Merits:
+
+Easily converts server data into usable object form
+➡ Helpful when receiving JSON from an API.
+
+Restores nested objects correctly.
+
+❌ Demerits:
+
+Invalid JSON format causes error
+➡ Must use try/catch for safety.
+
+Does not convert functions back into objects.
+
+✅ 3. Object.keys() – Get Object Property Names
+📌 Definition:
+
+Returns an array of all property names (keys) in an object.
+
+📌 Your Example Breakdown:
+const keys = Object.keys(person)
+console.log(keys)
+
+
+✔ Output → ['name', 'age', 'country']
+
+✅ 4. Object.values() – Get Object Property Values
+📌 Definition:
+
+Returns an array of values for each property in an object.
+
+📌 Your Example Breakdown:
+const values = Object.values(person)
+console.log(values)
+
+
+✔ Output → ['Maruf Hasan', 25, { a: 'bangladesh', b: 'usa' }]
+
+✅ 5. Spread Operator (...) – Add a New Object to an Array
+📌 Definition:
+
+Spread operator ... copies all items from an array or object into a new one.
+
+📌 Your Example Breakdown:
+const product = [
+    { name: 'maruf', age: 25, status: 'married' },
+    { name: 'munna', age: 19, status: 'unmarried' },
+    { name: 'muhit', age: 13, status: 'unmarried' }
+]
+const newProduct = { name: 'xyz', age: 50, status: 'single' }
+
+const finalProduct = [...product, newProduct]
+console.log(finalProduct)
+
+
+✔ Creates a new array with all previous items + new item at the end.
+
+✅ Merits:
+
+Does not modify original array (immutable)
+
+Easy to add new items
+
+Cleaner and faster syntax
+
+❌ Demerits:
+
+Shallow copy only (nested data not deeply cloned)
+
+Large arrays can affect performance
+
+✅ 6. filter() – Get Specific Items from an Array
+📌 Definition:
+
+Returns a new array with items that match a given condition.
+
+📌 Your Example Breakdown:
+const remainingProduct = product.filter(pro => pro.status === 'married')
+console.log(remainingProduct)
+
+const lastProduct = [...remainingProduct, newProduct]
+console.log(lastProduct)
+
+
+✔ Filters only married people
+✔ Then adds newProduct to filtered list
