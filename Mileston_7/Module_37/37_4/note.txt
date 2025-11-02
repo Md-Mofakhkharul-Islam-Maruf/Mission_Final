@@ -1,0 +1,86 @@
+🔹 Array Destructuring
+✅ Definition:
+
+Array destructuring is a method to extract values from an array and store them into separate variables based on their index (position).
+
+✅ Your Example Breakdown:
+const name = ['maruf', 'munna', 'muhit'];
+const [big, medium, small] = name;
+console.log(small, medium, big);
+
+
+✔ name is an array with 3 elements: 'maruf', 'munna', 'muhit'
+✔ [big, medium, small] extracts values in order:
+  • big = 'maruf'
+  • medium = 'munna'
+  • small = 'muhit'
+✔ console.log(small, medium, big); prints → muhit munna maruf
+
+✅ Merits of Array Destructuring:
+
+Easy and Clean Syntax
+➡ Avoids using name[0], name[1], etc.
+
+Assign Multiple Values Quickly
+➡ Multiple variables can be assigned in one line.
+
+Improves Readability
+➡ Code becomes simple, modern, and easy to understand.
+
+❌ Demerits of Array Destructuring:
+
+Order Dependent
+➡ Values are assigned based on index. If order changes, variables get wrong values.
+
+Undefined Values if Missing
+➡ If array has fewer items, extra variables become undefined.
+
+Hard to Use with Large Arrays
+➡ Too many variables make the code messy and difficult to read.
+
+🔹 Object Destructuring
+✅ Definition:
+
+Object destructuring is a method to extract specific values from an object using key names and store them in variables.
+
+✅ Your Example Breakdown:
+const person = {
+    name: 'Maruf Hasan',
+    age: 25,
+    country: 'bangladesh'
+};
+
+const { age, country } = person;
+console.log(country);
+
+
+✔ person is an object with keys: name, age, country
+✔ { age, country } extracts values by key names:
+  • age = 25
+  • country = 'bangladesh'
+✔ console.log(country); prints → bangladesh
+
+✅ Merits of Object Destructuring:
+
+No Need for Dot Notation Repeats
+➡ No need to write person.age, person.country again and again.
+
+Order Doesn’t Matter
+➡ Values are matched by key name, not index.
+
+Can Rename Variables Easily
+➡ Example:
+
+const { country: nation } = person;
+console.log(nation); // bangladesh
+
+❌ Demerits of Object Destructuring:
+
+Must Use Correct Property Name
+➡ If key name is wrong (like contry instead of country), the result will be undefined.
+
+Nested (Deep) Destructuring is Confusing
+➡ Hard to read and debug when objects are inside objects.
+
+Name Conflicts in Same Scope
+➡ If a variable already exists with the same name, it can cause errors or overwrite it.
