@@ -1,0 +1,78 @@
+✅ 1. localStorage in JavaScript
+🔹 Definition:
+
+localStorage is a web storage object in JavaScript that allows you to store key-value pairs in the browser.
+
+Data persists even after the browser is closed.
+
+Values must be strings, so objects need to be converted using JSON.stringify().
+
+🔹 Example Breakdown:
+1️⃣ Adding data to localStorage
+const handleAddtoStorage = () => {
+    const id = document.getElementById('id').value 
+    const name = document.getElementById('name').value 
+
+    const data = {id, name}
+    console.log(data)
+    localStorage.setItem(id, JSON.stringify(data))
+}
+
+
+id and name are values from the input fields.
+
+data is an object: {id: '101', name: 'Maruf'}
+
+localStorage.setItem(id, JSON.stringify(data))
+
+Saves the object as a string under the key = id.
+
+console.log(data) prints the object before storing.
+
+2️⃣ Retrieving data from localStorage
+const storedItem = localStorage.getItem('101')
+console.log(JSON.parse(storedItem))
+
+
+localStorage.getItem('101') fetches the string stored with key '101'.
+
+JSON.parse() converts the string back to an object.
+
+Output example: {id: "101", name: "Maruf"}
+
+Important: This works only if key '101' exists. Otherwise, it returns null.
+
+3️⃣ Clearing localStorage
+const handleClear = () => {
+    localStorage.clear()
+}
+
+
+Removes all items from localStorage.
+
+Useful to reset stored data.
+
+✅ Merits of Using localStorage
+
+Persistent Storage
+➡ Data stays even after closing the browser.
+
+Easy to Use
+➡ Simple methods: setItem, getItem, removeItem, clear.
+
+Can Store Complex Objects
+➡ Use JSON.stringify to store objects and JSON.parse to retrieve them.
+
+❌ Demerits of Using localStorage
+
+Limited Storage
+➡ Usually around 5–10 MB per domain.
+
+Only Stores Strings
+➡ Must convert objects manually.
+
+Synchronous Operations
+➡ Can block the main thread if storing large amounts of data.
+
+Security Risk
+➡ Data is stored plainly in the browser; sensitive info can be exposed.
