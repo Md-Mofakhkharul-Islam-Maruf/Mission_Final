@@ -57,3 +57,108 @@ Logical AND (&&) or OR (||)
 Default props are useful for optional values (time = 0).
 
 If you want, I can make a compact visual table showing all 3 conditional renderings with examples, so it’s easy to memorize for React.
+
+
+
+1️⃣ Definition
+
+map() is an array method that creates a new array by applying a function to each element of the original array.
+
+The original array is not modified.
+
+Each element in the new array is the result of the callback function.
+
+2️⃣ Syntax
+const newArray = array.map((currentValue, index, array) => {
+    // return a new value for the new array
+});
+
+
+Parameters:
+
+currentValue – the current element being processed.
+
+index (optional) – the index of the current element.
+
+array (optional) – the original array.
+
+Return value:
+
+A new array with transformed values.
+
+3️⃣ Example Breakdown
+Example 1: Simple numbers
+const numbers = [1, 2, 3, 4];
+const squared = numbers.map(num => num * num);
+console.log(squared); // [1, 4, 9, 16]
+
+
+num → each element of numbers
+
+num * num → calculation applied to each element
+
+Result → new array [1, 4, 9, 16]
+
+Example 2: Mapping objects in React
+const singers = [
+  { id: 1, name: 'Monir', age: 60 },
+  { id: 2, name: 'Naznin', age: 60 },
+  { id: 3, name: 'Sabina', age: 55 }
+];
+
+const singerComponents = singers.map(singer => (
+  <div key={singer.id}>
+    <h3>Name: {singer.name}</h3>
+    <p>Age: {singer.age}</p>
+  </div>
+));
+
+
+✅ Useful in React to render lists dynamically.
+
+Each element returns a JSX element.
+
+Always add key prop in React to prevent warnings.
+
+4️⃣ Use Cases
+
+Transforming array elements (numbers → squaredNumbers).
+
+Extracting data (array of objects → array of names).
+
+Rendering lists in React.
+
+Modifying elements without changing the original array.
+
+5️⃣ Pros & Cons
+
+Pros:
+
+Non-destructive (original array stays intact).
+
+Clean and functional approach.
+
+Works perfectly in React for rendering dynamic lists.
+
+Cons:
+
+Always returns a new array, which may be memory heavy for very large arrays.
+
+If you don’t return anything inside the callback, the new array will contain undefined.
+
+6️⃣ Full React Example
+function App() {
+  const actors = ['Bappa', 'Sunny', 'Hena'];
+
+  return (
+    <div>
+      <h2>Actors:</h2>
+      {actors.map((actor, index) => (
+        <p key={index}>{actor}</p>
+      ))}
+    </div>
+  );
+}
+
+
+map() dynamically renders each actor as a <p> element.
