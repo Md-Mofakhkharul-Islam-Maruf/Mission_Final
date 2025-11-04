@@ -1,44 +1,18 @@
-import './App.css'
 
-// ✅ Main App Component
+// 38_6
+import './App.css'
+import ToDo from './ToDo';
+
 function App() {
+  const time = 50
   return (
     <>
       <div>
-        <h1>Hello Developers</h1>
-
-        <Person name="Maruf"></Person>
-
-        {/* ✅ Passing props with and without default value */}
-        <Salami event="Eid ul Fitar" taka="1000"></Salami>
-        <Salami event="Nobin Boron"></Salami>
+        <ToDo task='learn React' isDone={true} time={time} ></ToDo>
+        <ToDo task='Revise Js' isDone={false} ></ToDo>
+        <ToDo task='learn Php' isDone={true} time='100' ></ToDo>
       </div>
     </>
-  )
-}
-
-// -------------------------
-// ✅ Child Component 1: Props (Not Destructured)
-// -------------------------
-function Person(props) {
-  console.log(props)
-  return (
-    <div>
-      <p>My name is {props.name}</p>
-    </div>
-  )
-}
-
-// -------------------------
-// ✅ Child Component 2: Props Destructuring + Default Value
-// -------------------------
-function Salami({ event, taka = 100 }) {
-  console.log(taka)
-  return (
-    <div className="style">
-      <p>Salami for : {event}</p>
-      <p>Amount : {taka}</p>
-    </div>
   )
 }
 
