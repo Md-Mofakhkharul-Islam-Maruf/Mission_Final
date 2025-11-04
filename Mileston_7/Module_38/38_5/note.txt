@@ -1,45 +1,59 @@
-import './App.css'
+Different ways of conditional rendering
 
-// ✅ Main App Component
-function App() {
-  return (
-    <>
-      <div>
-        <h1>Hello Developers</h1>
+You commented out three variations:
 
-        <Person name="Maruf"></Person>
+Way 1: Ternary operator
+return isDone 
+    ? <li>Task: {task} time: {time}</li> 
+    : <li>Not done: {task} time= {time}</li>
 
-        {/* ✅ Passing props with and without default value */}
-        <Salami event="Eid ul Fitar" taka="1000"></Salami>
-        <Salami event="Nobin Boron"></Salami>
-      </div>
-    </>
-  )
+
+✅ Shows one of two options based on isDone.
+
+Way 2: Logical AND (&&)
+return isDone && <li>Task: {task} time: {time}</li>
+
+
+✅ Shows <li> only if isDone is true.
+
+❌ If isDone is false, returns false, nothing renders.
+
+Way 3: Logical OR (||)
+return isDone || <li>Task: {task} time: {time}</li>
+
+
+✅ Shows <li> only if isDone is false (because false || something evaluates to something).
+
+This is less common but works for “show if NOT done”.
+
+3️⃣ Using if-else (your final implementation)
+let finalStatement;
+if (isDone) {
+    finalStatement = <li>Task: {task} time: {time}</li>
+}else{
+    finalStatement = <li>Not done: {task} time= {time}</li>
 }
+return finalStatement;
 
-// -------------------------
-// ✅ Child Component 1: Props (Not Destructured)
-// -------------------------
-function Person(props) {
-  console.log(props)
-  return (
-    <div>
-      <p>My name is {props.name}</p>
-    </div>
-  )
-}
 
-// -------------------------
-// ✅ Child Component 2: Props Destructuring + Default Value
-// -------------------------
-function Salami({ event, taka = 100 }) {
-  console.log(taka)
-  return (
-    <div className="style">
-      <p>Salami for : {event}</p>
-      <p>Amount : {taka}</p>
-    </div>
-  )
-}
+✅ Very clear and readable.
 
-export default App
+Good for beginners to understand conditional rendering logic.
+
+Works exactly like the ternary operator, just more verbose.
+
+4️⃣ Key takeaways
+
+Props are read-only; you only use them, don’t modify.
+
+Conditional rendering can be done via:
+
+if-else
+
+Ternary operator (? :)
+
+Logical AND (&&) or OR (||)
+
+Default props are useful for optional values (time = 0).
+
+If you want, I can make a compact visual table showing all 3 conditional renderings with examples, so it’s easy to memorize for React.
