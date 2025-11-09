@@ -171,3 +171,55 @@ You’re keeping state local to the component that uses it (Batsman).
 App remains clean and focuses only on layout or routing.
 
 Each component does one job — this is perfect React design.
+
+
+
+
+
+
+
+
+
+
+39-6 Load dynamic data, API call using use/////////////////
+1️⃣ You wrote:
+const fetchFriends = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/users')
+  return res.json()
+}
+
+
+✅ This returns a promise that resolves to your list of friends.
+
+2️⃣ Inside App()
+const friendsPromise = fetchFriends()
+
+
+You’re creating the promise directly inside App() and passing it as a prop:
+
+<Friends friendsPromise={friendsPromise} />
+
+
+So Friends receives that promise and can “suspend” until the data is ready.
+
+3️⃣ Inside Friends()
+import { use } from "react"
+
+export default function Friends({ friendsPromise }) {
+  const friends = use(friendsPromise)
+  return <h3>Friend: {friends.length}</h3>
+}
+
+
+✅ Here, the new React use() hook (experimental as of React 19) automatically waits for the promise to resolve.
+When friendsPromise resolves, React re-renders the component with the fetched data.
+
+4️⃣ Suspense boundary
+<Suspense fallback="Loading for data">
+  <Friends friendsPromise={friendsPromise} />
+</Suspense>
+
+
+While the promise is still pending, the Suspense boundary shows "Loading for data".
+
+When it’s resolved, React renders <Friends> with real data.

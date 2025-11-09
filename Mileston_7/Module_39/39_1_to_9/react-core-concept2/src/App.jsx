@@ -1,8 +1,27 @@
 import { useState } from 'react'
 import './App.css'
 import Batsman from './Batsman'
+import Users from './Users'
+import { Suspense } from 'react'
+import Friends from './Friends'
 
+//39_5
+// const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
+
+
+
+// 39-6 Load dynamic data, API call using use
+// const fetchFriends = async()=>{
+//   const res = await fetch('https://jsonplaceholder.typicode.com/users')
+//   return res.json()
+// }
 function App() {
+
+   //39-6 Load dynamic data, API call using use
+  // const friendsPromise = fetchFriends()
+
+
+
 
   // 39-2 Different ways to handle events in React
   // function handleClick() {
@@ -50,6 +69,18 @@ function App() {
 
       {/*39-4 Understand the concept of useState and react hooks*/}
       {/* <Batsman></Batsman> */}
+
+
+
+      {/* Uses of use */}
+      {/* <Suspense fallback={'loadding'}>
+        <Users fetchUsers={fetchUsers}></Users>
+      </Suspense> */}
+
+{/* 
+      <Suspense fallback='Loading for data'>
+        <Friends friendsPromise={friendsPromise}></Friends>
+      </Suspense> */}
 
     </>
   )
