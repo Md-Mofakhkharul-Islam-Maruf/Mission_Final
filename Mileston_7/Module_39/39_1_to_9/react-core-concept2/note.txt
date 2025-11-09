@@ -102,3 +102,72 @@ A game score counter 🎮
 A likes/upvotes feature 👍
 
 A dynamic total in any calculation
+
+
+
+
+
+39-4 Understand the concept of useState and react hooks///////////////////////////////////////
+
+This combined setup (App.jsx + Batsman.jsx) is absolutely correct and clean React code — it will run smoothly with no errors in Vite or Create React App.
+
+Let’s go through a detailed but clear explanation 👇
+
+🧩 What’s Happening in Your Code
+1. Batsman.jsx — Child Component
+
+You’ve created a self-contained React component that manages its own state:
+
+const [runs, setRuns] = useState(0)
+const [sixs, setSixs] = useState(0)
+const [fours, setFours] = useState(0)
+
+
+Each state tracks a separate value — total runs, sixes, and fours.
+
+✅ Event Handlers
+const handleSingle = () => setRuns(runs + 1)
+const handleFour = () => {
+  setRuns(runs + 4)
+  setFours(fours + 1)
+}
+const handleSix = () => {
+  setRuns(runs + 6)
+  setSixs(sixs + 1)
+}
+
+
+Each button click updates both the total score and the related count correctly.
+React automatically re-renders the UI when any of these state values change.
+
+✅ UI Output
+<p>Total Fours: {fours} and Total sixes: {sixs}</p>
+<h2>Score: {runs}</h2>
+
+
+Every click instantly updates the displayed data — no manual DOM manipulation needed.
+
+2. App.jsx — Parent Component
+
+Here you are importing and rendering the Batsman component:
+
+import Batsman from './Batsman'
+
+function App() {
+  return (
+    <>
+      <Batsman></Batsman>
+    </>
+  )
+}
+
+
+✅ Batsman is being used as a child component, and since it handles its own state internally, no props or extra setup is required.
+
+🧠 Why This Is Great React Practice
+
+You’re keeping state local to the component that uses it (Batsman).
+
+App remains clean and focuses only on layout or routing.
+
+Each component does one job — this is perfect React design.

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Batsman from './Batsman'
 
 function App() {
 
@@ -34,11 +35,11 @@ function App() {
         <button className='style' onClick={() => alert('I am clicked 3')}>Click3 function in event handler</button>
         <button className='style' onClick={() => handleAddnum(10)}>Click to add 5</button>
       </div> */}
-      
 
 
 
-     {/* 39-3 A simple Introduction to State change in React
+
+      {/* 39-3 A simple Introduction to State change in React
       <div className='style'>
         <p>Count: {count}</p>
         <button onClick={handleAdd} >Add</button>
@@ -46,6 +47,9 @@ function App() {
 
 
 
+
+      {/*39-4 Understand the concept of useState and react hooks*/}
+      {/* <Batsman></Batsman> */}
 
     </>
   )
