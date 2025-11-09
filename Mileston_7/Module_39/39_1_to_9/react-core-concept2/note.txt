@@ -1,0 +1,56 @@
+///////////////39-2 Different ways to handle events in React//////////////
+🧩 Definition
+
+This App component demonstrates four different ways to handle button clicks in React using both regular and arrow functions.
+
+💡 Example Breakdown
+
+Normal Function Declaration
+
+function handleClick() {
+  alert('I am clicked');
+}
+
+
+👉 Bound when the component renders — called in the onClick directly.
+
+<button onClick={handleClick}>Click with normal function</button>
+
+
+Arrow Function Declaration
+
+const handleClick2 = () => {
+  alert('I am clicked 2');
+}
+
+
+👉 Works the same, just written in modern arrow syntax.
+
+<button onClick={handleClick2}>Click2 with arrow function</button>
+
+
+Inline Function (inside JSX)
+
+<button onClick={() => alert('I am clicked 3')}>Click3 function in event handler</button>
+
+
+👉 Function is defined directly inside the onClick.
+⚠️ Creates a new function every render (not a problem here, but not efficient for large apps).
+
+Event Handler with Argument
+
+const handleAddnum = (num) => {
+  alert(num + 5);
+}
+
+
+👉 You can pass arguments using an inline function:
+
+<button onClick={() => handleAddnum(10)}>Click to add 5</button>
+
+
+✅ Shows 15 in the alert.
+
+⚙️ Use Case
+
+This example teaches different click-handling patterns you’ll use throughout React apps — for buttons, form actions, modals, and more
