@@ -4,6 +4,7 @@ import Batsman from './Batsman'
 import Users from './Users'
 import { Suspense } from 'react'
 import Friends from './Friends'
+import Posts from './Posts'
 
 //39_5
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
@@ -15,11 +16,24 @@ import Friends from './Friends'
 //   const res = await fetch('https://jsonplaceholder.typicode.com/users')
 //   return res.json()
 // }
+
+
+
+
+
+// 39-7 (Recap) Load dynamic data using async await
+const fetchPosts = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  return res.json()
+}
 function App() {
 
-   //39-6 Load dynamic data, API call using use
+  //39-6 Load dynamic data, API call using use
   // const friendsPromise = fetchFriends()
 
+
+// 39-7 (Recap) Load dynamic data using async await
+  const postPromise = fetchPosts()
 
 
 
@@ -72,15 +86,30 @@ function App() {
 
 
 
+
+      {/* 39-5 */}
       {/* Uses of use */}
       {/* <Suspense fallback={'loadding'}>
         <Users fetchUsers={fetchUsers}></Users>
       </Suspense> */}
 
-{/* 
-      <Suspense fallback='Loading for data'>
+
+
+
+
+      {/* 39-6 */}
+      {/* <Suspense fallback='Loading for data'>
         <Friends friendsPromise={friendsPromise}></Friends>
       </Suspense> */}
+
+
+
+
+
+      {/* 39-7 */}
+      <Suspense fallback="Your data is loading">
+          <Posts postPromise={postPromise}></Posts>
+        </Suspense>
 
     </>
   )
