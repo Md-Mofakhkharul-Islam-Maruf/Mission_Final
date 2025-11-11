@@ -5,6 +5,7 @@ import Users from './Users'
 import { Suspense } from 'react'
 import Friends from './Friends'
 import Posts from './Posts'
+import Players from './Players'
 
 //39_5
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
@@ -22,18 +23,24 @@ import Posts from './Posts'
 
 
 // 39-7 (Recap) Load dynamic data using async await
-const fetchPosts = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  return res.json()
-}
+// const fetchPosts = async () => {
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+//   return res.json()
+// }
+
+
+
+
+
+
 function App() {
 
   //39-6 Load dynamic data, API call using use
   // const friendsPromise = fetchFriends()
 
 
-// 39-7 (Recap) Load dynamic data using async await
-  const postPromise = fetchPosts()
+  // 39-7 (Recap) Load dynamic data using async await
+  // const postPromise = fetchPosts()
 
 
 
@@ -106,10 +113,15 @@ function App() {
 
 
 
-      {/* 39-7 */}
+      {/* 39-7
       <Suspense fallback="Your data is loading">
           <Posts postPromise={postPromise}></Posts>
-        </Suspense>
+        </Suspense> */}
+
+
+
+      {/* 39-8 ( Optional) Load data using useEffect hook */}
+      <Players></Players>
 
     </>
   )
