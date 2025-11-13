@@ -1,3 +1,6 @@
-40-1 Module Introduction, load countries using promise and use API
+/////////40-1 Module Introduction, load countries using promise and use API
 
 Install a react project and Install a package 'Simple React Snippets'
+
+//40-2 Display countries in a simple way
+Fetch country api and show name & population
