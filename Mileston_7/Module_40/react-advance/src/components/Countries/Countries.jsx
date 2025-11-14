@@ -5,13 +5,24 @@ import './countries.css'
 const Countries = ({ countriesPromise }) => {
     const countries = use(countriesPromise)
     // console.log(countries)
-    // const [visitedCountry, setVisitedCountry] = useState([])
+
+    const [visitedCountry, setVisitedCountry] = useState([])
+
     const handlevisitedCountry = (country) => {
-            console.log('country visited', country)
+        const newVisitedCountry = [...visitedCountry, country]
+        setVisitedCountry(newVisitedCountry)
+        console.log(country)
     }
     return (
         <div>
             <h1>Traveling Countries: {countries.length || 'Pawa jay nai'}</h1>
+            <h3>Travelled country:
+                <ol>
+                    {
+                        visitedCountry.map(visited => <li>{visited.name.common}</li>)
+                    }
+                </ol>
+            </h3>
             <div className='countries'>
                 {
                     countries.map(country => <Country
