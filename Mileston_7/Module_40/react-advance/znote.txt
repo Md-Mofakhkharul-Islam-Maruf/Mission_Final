@@ -20,3 +20,9 @@ use chaining method for rendering things if it not prewsents
 
 ///////40-4 Use style in react and 3 column layout
 Create some css style and apply in county.jsx file and add a event handler
+
+
+
+
+///////40-5 Conditional CSS and Toggle state based on click
+added classname based on variables value, toggle means change something depends on state like true or false
