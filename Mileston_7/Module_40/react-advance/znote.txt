@@ -26,3 +26,8 @@ Create some css style and apply in county.jsx file and add a event handler
 
 ///////40-5 Conditional CSS and Toggle state based on click
 added classname based on variables value, toggle means change something depends on state like true or false
+
+
+
+//////40-6 Lift up the state to handle child component event
+manage state from child component to parent component
