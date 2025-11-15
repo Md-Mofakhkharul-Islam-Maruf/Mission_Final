@@ -35,3 +35,7 @@ manage state from child component to parent component
 
 ///40-7 (advanced) Lift up state in arrays by comparing reference
 array or object never change directly cz memory take reference but we can change inside element of array or objects
+
+
+///////40-8 (Recap) Lift up state for flags and handle immutable array
+Dont push a new array in an existing array at first destructure and then marge two array in a new array
