@@ -1,2 +1,5 @@
 /////41-2 ES6 Modules, import default, relative path
 simple fetch json data
+
+////41-3 Create and Load Fake data, json generator, online api
+create a fake json data by ai and load these data
