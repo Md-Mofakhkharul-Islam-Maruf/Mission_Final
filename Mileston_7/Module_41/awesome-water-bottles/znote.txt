@@ -3,3 +3,6 @@ simple fetch json data
 
 ////41-3 Create and Load Fake data, json generator, online api
 create a fake json data by ai and load these data
+
+//////41-4 (Recap) Load Bottles Data and show in grid layout
+Again data manage in grid layout and lift up state
