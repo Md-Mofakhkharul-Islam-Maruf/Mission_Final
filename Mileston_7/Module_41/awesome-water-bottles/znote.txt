@@ -6,3 +6,10 @@ create a fake json data by ai and load these data
 
 //////41-4 (Recap) Load Bottles Data and show in grid layout
 Again data manage in grid layout and lift up state
+
+//////////41-6 [optional] Introduction to Local Storage: Storing Data in the Browser
+describe how to merge data from localstorage and again store in localstorge
+
+
+///// 41-7 [optional] use effect dependency and load stored id 
+use UseEffect to load from localstorage and show in UI
