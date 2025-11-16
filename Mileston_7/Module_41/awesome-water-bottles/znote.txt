@@ -1,0 +1,2 @@
+/////41-2 ES6 Modules, import default, relative path
+simple fetch json data
