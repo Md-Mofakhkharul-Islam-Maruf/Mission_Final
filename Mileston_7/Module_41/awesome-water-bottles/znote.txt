@@ -13,3 +13,8 @@ describe how to merge data from localstorage and again store in localstorge
 
 ///// 41-7 [optional] use effect dependency and load stored id 
 use UseEffect to load from localstorage and show in UI
+
+
+////////41-8 [optional] Display Saved cart from Local storage
+remove item from ui, functionality in the next video
+
