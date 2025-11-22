@@ -12,3 +12,8 @@ set a simple Layout
 
 /////42-4 Display Blog data and hashtags
 create a single blog component|||pass single blog from blogs|||show blogs data
+
+
+
+//////////42-5 Add Bookmark button
+style each card||| install react icon ||  
