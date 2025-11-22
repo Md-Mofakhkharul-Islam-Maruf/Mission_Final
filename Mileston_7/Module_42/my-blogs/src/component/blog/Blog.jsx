@@ -24,7 +24,7 @@ const Blog = ({ blog, handleBookmarked, handleReadingTime }) => {
                     }
                 </div>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary" onClick={()=>handleReadingTime(blog.reading_time)}>Mark as Read</button>
+                    <button className="btn btn-primary" onClick={()=>handleReadingTime(blog.reading_time, blog.id)}>Mark as Read</button>
                 </div>
             </div>
         </div>

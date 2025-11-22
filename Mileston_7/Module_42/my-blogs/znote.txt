@@ -26,3 +26,7 @@ Added function and pass through grandchild component || display bookmarked data 
 
 ///42-7 Add Time when marked as read
 added function and pass to grandchild and display value || display reading time data
+
+
+///42-8 Remove bookmark after read
+handle remove id for mark as read

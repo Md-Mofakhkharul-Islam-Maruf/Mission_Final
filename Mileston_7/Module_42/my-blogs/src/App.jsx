@@ -14,8 +14,15 @@ function App() {
 
   const [readingTime, setReadingTime] = useState(0)
 
-  const handleReadingTime = (time) => {
+  const handleReadingTime = (time, id) => {
     setReadingTime(readingTime + time)
+    handleRemoveId(id)
+  }
+
+  const handleRemoveId = (id) => {
+    const remailningId = marked.filter(remove => remove.id !== id)
+    setBookmarked(remailningId)
+
   }
 
   return (
@@ -29,7 +36,7 @@ function App() {
           <h2>Bookmarked: {marked.length}</h2>
           <h2>Reading Time: {readingTime}</h2>
           {
-            marked.map(mark => <p>{mark.title}</p>)
+            marked.map(mark => <p className='bg-red-600 m-2 p-2 text-white font-semibold '>{mark.title}</p>)
           }
         </div>
       </div>

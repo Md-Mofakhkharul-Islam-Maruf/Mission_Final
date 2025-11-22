@@ -10,7 +10,7 @@ const Blogs = ({ handleBookmarked, handleReadingTime }) => {
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])
-    console.log(blogs)
+    // console.log(blogs)
 
 
     return (
