@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoBookmarksSharp } from 'react-icons/io5';
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleBookmarked }) => {
     return (
         <div className="card bg-base-100 w-96 shadow-sm m-10">
             <figure>
@@ -13,7 +13,9 @@ const Blog = ({ blog }) => {
                 <div className='flex justify-around items-center'>
                     <img className='w-12' src={blog.author_img} alt="" />
                     <h3 className='text-2xl font-semibold'>{blog.author}</h3>
-                    <IoBookmarksSharp size={25} />
+                    <button onClick={()=>handleBookmarked(blog)}>
+                        <IoBookmarksSharp size={25} />
+                    </button>
                 </div>
                 <p className='text-lg font-semibold'>{blog.title}</p>
                 <div className='flex text-2xl'>

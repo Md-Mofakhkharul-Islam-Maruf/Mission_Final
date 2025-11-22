@@ -17,3 +17,7 @@ create a single blog component|||pass single blog from blogs|||show blogs data
 
 //////////42-5 Add Bookmark button
 style each card||| install react icon ||  
+
+
+/////42-6 Handle bookmark state and display bookmark And lift up the state
+Added function and pass through grandchild component || display bookmarked data ||
