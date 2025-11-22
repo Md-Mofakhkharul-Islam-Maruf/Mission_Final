@@ -30,3 +30,6 @@ added function and pass to grandchild and display value || display reading time 
 
 ///42-8 Remove bookmark after read
 handle remove id for mark as read
+
+
+/// 42-9 simply deploy to surge

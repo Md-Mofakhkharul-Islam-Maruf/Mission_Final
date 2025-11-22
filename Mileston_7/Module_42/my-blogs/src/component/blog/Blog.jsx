@@ -20,7 +20,7 @@ const Blog = ({ blog, handleBookmarked, handleReadingTime }) => {
                 <p className='text-lg font-semibold'>{blog.title}</p>
                 <div className='flex text-2xl'>
                     {
-                        blog.hashtags.map(hash => <p>{hash}</p>)
+                        blog.hashtags.map(hash => <p key={hash}>{hash}</p>)
                     }
                 </div>
                 <div className="card-actions justify-end">
