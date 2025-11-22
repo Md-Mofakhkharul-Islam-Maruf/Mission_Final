@@ -3,3 +3,8 @@ install react, tailwind and daisy UI
 
 
 ///////////42-3 fetch normal data from public folder
+
+
+
+///42-3 Set Layout and make react responsive
+set a simple Layout
