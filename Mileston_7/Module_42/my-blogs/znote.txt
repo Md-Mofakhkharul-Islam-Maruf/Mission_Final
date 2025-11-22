@@ -21,3 +21,8 @@ style each card||| install react icon ||
 
 /////42-6 Handle bookmark state and display bookmark And lift up the state
 Added function and pass through grandchild component || display bookmarked data ||
+
+
+
+///42-7 Add Time when marked as read
+added function and pass to grandchild and display value || display reading time data

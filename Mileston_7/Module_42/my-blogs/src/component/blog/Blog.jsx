@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoBookmarksSharp } from 'react-icons/io5';
 
-const Blog = ({ blog, handleBookmarked }) => {
+const Blog = ({ blog, handleBookmarked, handleReadingTime }) => {
     return (
         <div className="card bg-base-100 w-96 shadow-sm m-10">
             <figure>
@@ -24,7 +24,7 @@ const Blog = ({ blog, handleBookmarked }) => {
                     }
                 </div>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Mark as Read</button>
+                    <button className="btn btn-primary" onClick={()=>handleReadingTime(blog.reading_time)}>Mark as Read</button>
                 </div>
             </div>
         </div>
