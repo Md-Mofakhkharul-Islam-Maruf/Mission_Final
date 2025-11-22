@@ -1,0 +1,5 @@
+/////////42-1 Scribbles Cafe Project Overview and Tailwind setup
+install react, tailwind and daisy UI
+
+
+///////////42-3 fetch normal data from public folder
