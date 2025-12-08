@@ -3,6 +3,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+/* added font */
 body {
   font-family: "Playwrite NO", cursive;
   font-optical-sizing: auto;
