@@ -4,9 +4,10 @@ const Navlink = ({ navItems }) => {
     return (
         <ul className='flex'>
             {
-                navItems.map(item => <li className='mx-5'>
-                    <a href={item.path}>{item.name}</a>
-                </li>)
+                navItems.map(item =>
+                    <li className='mx-5' key={item.id}>
+                        <a href={item.path}>{item.name}</a>
+                    </li>)
             }
         </ul>
     );

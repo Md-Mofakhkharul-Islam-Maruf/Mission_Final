@@ -1,0 +1,4 @@
+////////////44-2 start a custom navigation and install lucide icons
+3 way to create nav: static conventional way, dynamic map, and create another component and call it from navbar
+
+
