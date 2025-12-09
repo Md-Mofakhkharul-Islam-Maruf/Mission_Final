@@ -17,17 +17,19 @@ const Navbar = () => {
         <nav className='flex justify-between mx-4'>
 
 
-            <ul className='md:hidden'>
-                {
-                    navItems.map(item => <li><a href={item.path}>{item.name}</a></li>)
-                }
-            </ul>
+
             {/* menu and cross button logic */}
             <span className='flex' onClick={() => setOpen(!open)}>
                 {
                     open ? <Menu className='md:hidden' /> : <X className='md:hidden' />
                 }
                 <h3 className='hidden md:flex'>My Navbar</h3>
+
+                <ul className='md:hidden'>
+                    {
+                        navItems.map(item => <li><a href={item.path}>{item.name}</a></li>)
+                    }
+                </ul>
             </span>
 
 
