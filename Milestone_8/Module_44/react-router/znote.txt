@@ -33,3 +33,8 @@ even if features count alada hoy.
 
 //////44-6 Use Daisy UI pricing card to modify for the component
 Jhankar vai do clear the concept again
+
+
+
+
+////////////44-7 Add charts to your react app
