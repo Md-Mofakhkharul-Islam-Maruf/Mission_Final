@@ -5,3 +5,28 @@
 ////44-5 Display Pricing options in Pricing Card
 1.load data.
 2. create pricing card and  show data
+
+button on same align clear concept: 
+
+
+<div className="w-[300px] bg-white rounded-3xl shadow-xl p-6 border flex flex-col">
+
+    <h3>Title</h3>
+    <p>Price</p>
+
+    <div className="flex-1">
+        Features...
+    </div>
+
+    <button className="mt-auto">
+        Join Now
+    </button>
+</div>
+
+🎯 How this works:
+w-[300px] → width fixed
+h-[500px] → height fixed
+flex flex-col → items arranged vertically
+flex-1 on features → pushes button down
+mt-auto on button → locks button at exact bottom line
+even if features count alada hoy.

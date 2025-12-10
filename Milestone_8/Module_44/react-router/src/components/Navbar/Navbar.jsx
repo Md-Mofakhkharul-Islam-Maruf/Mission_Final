@@ -13,7 +13,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className='flex justify-between m-4'>
+        <nav className='flex justify-between  mb-34 md:m-4'>
 
             {/* menu and cross button logic */}
             <span className='flex' onClick={() => setOpen(!open)}>

@@ -1,52 +1,52 @@
 [
-    {
-        "id": 1,
-        "name": "Basic Plan",
-        "price": 29,
-        "description": "Entry-level plan ideal for beginners starting their fitness journey.",
-        "features": [
-            "Access to basic gym equipment",
-            "Locker room access",
-            "1 fitness assessment",
-            "Flexible workout hours",
-            "Access to cardio machines",
-            "Weekly progress check",
-            "Basic workout plan"
-        ]
-    },
-    {
-        "id": 2,
-        "name": "Standard Plan",
-        "price": 49,
-        "description": "Perfect for regular gym members who want guidance and group activities.",
-        "features": [
-            "Everything in Basic Plan",
-            "Unlimited group classes",
-            "Access to strength training zone",
-            "2 personal trainer sessions",
-            "Nutrition guidance",
-            "Yoga & Zumba sessions",
-            "Access to cycling studio",
-            "Monthly body composition check",
-            "Priority locker availability"
-        ]
-    },
-    {
-        "id": 3,
-        "name": "Premium Plan",
-        "price": 79,
-        "description": "Advanced plan for serious fitness lovers seeking full benefits.",
-        "features": [
-            "Everything in Standard Plan",
-            "Unlimited personal trainer sessions",
-            "Sauna & steam room access",
-            "Advanced body scan & progress report",
-            "Diet & supplement plan",
-            "Swimming pool access",
-            "VIP lounge & rest area",
-            "Free gym merchandise",
-            "24/7 gym access",
-            "Priority support"
-        ]
-    }
+  {
+    "id": 1,
+    "name": "Basic Plan",
+    "price": 29,
+    "description": "Entry-level plan ideal for beginners starting their fitness journey.",
+    "features": [
+      "Access to basic gym equipment",
+      "Locker room access",
+      "1 fitness assessment",
+      "Flexible workout hours",
+      "Access to cardio machines",
+      "Weekly progress check",
+      "Basic workout plan"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Standard Plan",
+    "price": 49,
+    "description": "Perfect for regular gym members who want guidance and group activities.",
+    "features": [
+      "Everything in Basic Plan",
+      "Unlimited group classes",
+      "Access to strength training zone",
+      "2 personal trainer sessions",
+      "Nutrition guidance",
+      "Yoga & Zumba sessions",
+      "Access to cycling studio",
+      "Monthly body composition check",
+      "Priority locker availability"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Premium Plan",
+    "price": 79,
+    "description": "Advanced plan for serious fitness lovers seeking full benefits.",
+    "features": [
+      "Everything in Standard Plan",
+      "Unlimited personal trainer sessions",
+      "Sauna & steam room access",
+      "Advanced body scan & progress report",
+      "Diet & supplement plan",
+      "Swimming pool access",
+      "VIP lounge & rest area",
+      "Free gym merchandise",
+      "24/7 gym access",
+      "Priority support"
+    ]
+  }
 ]
