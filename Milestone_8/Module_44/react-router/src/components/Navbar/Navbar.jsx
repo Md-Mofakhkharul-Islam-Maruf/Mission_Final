@@ -13,14 +13,14 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className='flex justify-between mx-4'>
+        <nav className='flex justify-between m-4'>
 
             {/* menu and cross button logic */}
             <span className='flex' onClick={() => setOpen(!open)}>
                 {
                     open ? <X className='md:hidden' /> : <Menu className='md:hidden' />
                 }
-                <ul className={`md:hidden absolute duration-1000 ${open ? 'top-6' : '-top-30'}`}>
+                <ul className={`md:hidden absolute duration-1000 ${open ? 'top-10' : '-top-30'}`}>
                     {
                         navItems.map(item =>
                             <li >
