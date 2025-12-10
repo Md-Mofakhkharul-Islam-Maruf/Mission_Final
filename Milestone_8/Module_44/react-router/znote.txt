@@ -1,0 +1,7 @@
+///////44-4 Toggle Menu Items and create pricing data
+1. understand toggle menu in navbar and create a json data
+
+
+////44-5 Display Pricing options in Pricing Card
+1.load data.
+2. 

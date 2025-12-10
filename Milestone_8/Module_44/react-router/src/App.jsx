@@ -1,6 +1,10 @@
+import { Suspense } from 'react'
 import './App.css'
 import DaisyNav from './components/DaisyNav'
 import Navbar from './components/Navbar/Navbar'
+import PricingOption from './components/pricingOptions/PricingOption'
+
+const pricingPromise = fetch('pricingdata.json').then(res => res.json())
 
 function App() {
 
@@ -10,7 +14,11 @@ function App() {
         <Navbar></Navbar>
         {/* <DaisyNav></DaisyNav> */}
       </header>
-      <main></main>
+      <main>
+        <Suspense fallback={<span className="loading loading-dots loading-lg"></span>}>
+          <PricingOption pricingPromise={pricingPromise}></PricingOption>
+        </Suspense>
+      </main>
       <footer></footer>
     </>
   )

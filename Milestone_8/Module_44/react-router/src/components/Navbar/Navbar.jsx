@@ -23,7 +23,7 @@ const Navbar = () => {
                 <ul className={`md:hidden absolute duration-1000 ${open ? 'top-10' : '-top-30'}`}>
                     {
                         navItems.map(item =>
-                            <li >
+                            <li key={item.id}>
                                 <a className='mx-2 hover:text-teal-500 font-semibold' href={item.path}>{item.name}</a>
                             </li>)
                     }
@@ -34,7 +34,7 @@ const Navbar = () => {
 
             <ul className='hidden md:flex gap-8'>
                 {
-                    navItems.map(item => <li><a className='hover:text-teal-500' href={item.path}>{item.name}</a></li>)
+                    navItems.map(item => <li key={item.id}><a className='hover:text-teal-500' href={item.path}>{item.name}</a></li>)
                 }
             </ul>
             <h3>Sign In</h3>
