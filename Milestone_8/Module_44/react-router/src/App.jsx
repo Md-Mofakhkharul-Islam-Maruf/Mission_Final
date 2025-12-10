@@ -4,8 +4,11 @@ import DaisyNav from './components/DaisyNav'
 import Navbar from './components/Navbar/Navbar'
 import PricingOption from './components/pricingOptions/PricingOption'
 import MarksCharts from './components/marksCharts/MarksCharts'
+import axios from 'axios'
+import StudentMarks from './components/studentMarks/StudentMarks'
 
 const pricingPromise = fetch('pricingdata.json').then(res => res.json())
+const studentMarksPromise = axios('studentMarks.json')
 
 function App() {
   const marksdata = [
@@ -45,6 +48,10 @@ function App() {
 
         <Suspense fallback={<span className="loading loading-dots loading-lg"></span>}>
           <MarksCharts marksdata={marksdata}></MarksCharts>
+        </Suspense>
+
+         <Suspense fallback={<span className="loading loading-dots loading-lg"></span>}>
+          <StudentMarks studentMarksPromise={studentMarksPromise}></StudentMarks>
         </Suspense>
       </main>
       <footer></footer>

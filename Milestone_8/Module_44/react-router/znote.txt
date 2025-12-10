@@ -38,3 +38,9 @@ Jhankar vai do clear the concept again
 
 
 ////////////44-7 Add charts to your react app
+simple chart added 
+
+
+
+/////44-8 Explore Axios JS chart data processing and bar chart
+use axios and fetch data with bar charts, when we use axios then the data will come inside nested data
