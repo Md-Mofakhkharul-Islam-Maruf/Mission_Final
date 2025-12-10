@@ -6,7 +6,7 @@ const PricingCard = ({ pricing }) => {
 
     return (
         <div className="bg-white rounded-3xl shadow-xl p-6 border border-amber-300 
-                        hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex flex-col my-10">   {/* ADD THIS */}
+                        hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 flex flex-col">   {/* ADD THIS */}
 
             {/* Title */}
             <h3 className="text-2xl font-bold text-gray-800">{name}</h3>

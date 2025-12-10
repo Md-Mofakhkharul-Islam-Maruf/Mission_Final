@@ -6,7 +6,7 @@ const PricingOption = ({ pricingPromise }) => {
     return (
         <div>
             <h2 className='text-4xl hidden md:flex justify-center'>My Pricing Cards</h2>
-            <div className='md:grid grid-cols-3 gap-4'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
                 {
                     pricingData.map((pricing,index) => <PricingCard key={index} pricing={pricing}></PricingCard>)
                 }

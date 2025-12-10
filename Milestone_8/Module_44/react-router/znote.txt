@@ -30,3 +30,6 @@ flex flex-col → items arranged vertically
 flex-1 on features → pushes button down
 mt-auto on button → locks button at exact bottom line
 even if features count alada hoy.
+
+//////44-6 Use Daisy UI pricing card to modify for the component
+Jhankar vai do clear the concept again
