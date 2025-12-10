@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import Navlink from './Navlink';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
 
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
     const navItems = [
         { id: 1, name: "Home", path: "/" },
         { id: 2, name: "About", path: "/about" },
@@ -16,26 +15,26 @@ const Navbar = () => {
     return (
         <nav className='flex justify-between mx-4'>
 
-
-
             {/* menu and cross button logic */}
             <span className='flex' onClick={() => setOpen(!open)}>
                 {
-                    open ? <Menu className='md:hidden' /> : <X className='md:hidden' />
+                    open ? <X className='md:hidden' /> : <Menu className='md:hidden' />
                 }
-                <h3 className='hidden md:flex'>My Navbar</h3>
-
-                <ul className='md:hidden'>
+                <ul className={`md:hidden absolute duration-1000 ${open ? 'top-6' : '-top-30'}`}>
                     {
-                        navItems.map(item => <li><a href={item.path}>{item.name}</a></li>)
+                        navItems.map(item =>
+                            <li >
+                                <a className='mx-2 hover:text-teal-500 font-semibold' href={item.path}>{item.name}</a>
+                            </li>)
                     }
                 </ul>
+                <h3 className='mx-2'>My Navbar</h3>
             </span>
 
 
             <ul className='hidden md:flex gap-8'>
                 {
-                    navItems.map(item => <li><a href={item.path}>{item.name}</a></li>)
+                    navItems.map(item => <li><a className='hover:text-teal-500' href={item.path}>{item.name}</a></li>)
                 }
             </ul>
             <h3>Sign In</h3>
