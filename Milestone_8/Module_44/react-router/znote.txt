@@ -4,4 +4,4 @@
 
 ////44-5 Display Pricing options in Pricing Card
 1.load data.
-2. 
+2. create pricing card and  show data
