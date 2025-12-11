@@ -1,6 +1,7 @@
 import { Component, StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import App from './App.jsx'
 import { createBrowserRouter, RouterProvider, } from "react-router";
 import Home from './components/home/Home.jsx';
 import Root from './components/root/Root.jsx';
@@ -23,9 +24,9 @@ const router = createBrowserRouter([
       },
       {
         path: 'users2',
-        // element: <Suspense fallback="Data is loading">
-        //   <Users2 users2dataPromise={users2dataPromise}></Users2>
-        // </Suspense>,
+        element: <Suspense fallback="Data is loading">
+          <Users2 users2dataPromise={users2dataPromise}></Users2>
+        </Suspense>,
       }
     ]
   },
