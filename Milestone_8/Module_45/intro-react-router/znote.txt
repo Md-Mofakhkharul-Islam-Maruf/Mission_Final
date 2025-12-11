@@ -18,5 +18,10 @@ In this video i load data with suspense and without suspense and do a great thin
 //////45-5 params ,create dynamic path and render Dynamic Route
 create a dynamic path
 
+
 /////45-6 Explore Dynamic Route , Params & load Data based on dynamic route
 go dynamic route, usage of params 
+
+
+/////45-7 Explore hooks useNavigate and useNavigator for router spinner
+usage of simple useNavigate(),
