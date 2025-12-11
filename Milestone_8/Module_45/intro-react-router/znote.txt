@@ -9,3 +9,7 @@ create few component and start routing
 //////45-3 understand Nested Routing , Outlet , Link and NavLink
 setup main root named 'Root' and inside Root there is header, footer, aside, and Outlet. Here outlet is changeable
 All routing will always manage is main.jsx
+
+
+//////45-4 Multiple ways to load data using loader and useLoaderData
+In this video i load data with suspense and without suspense and do a great thing that is when we want to go any route in that time the necessary data will loaded.

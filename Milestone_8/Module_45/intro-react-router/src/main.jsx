@@ -1,12 +1,12 @@
-import { Component, StrictMode } from 'react'
+import { Component, StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import { createBrowserRouter, RouterProvider, } from "react-router";
 import Home from './components/home/Home.jsx';
 import Root from './components/root/Root.jsx';
-import Mobiles from './components/mobiles/Mobiles.jsx';
-import Laptop from './components/laptops/Laptop.jsx';
+import Users from './components/users/Users.jsx';
+import Users2 from './components/users2/Users2.jsx';
+const users2dataPromise = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
 
 const router = createBrowserRouter([
   {
@@ -14,8 +14,19 @@ const router = createBrowserRouter([
     Component: Root,
     children: [
       { index: true, Component: Home },
-      { path: 'mobiles', Component: Mobiles },
-      { path: 'laptops', Component: Laptop}
+      // { path: 'mobiles', Component: Mobiles },
+      // { path: 'laptops', Component: Laptop},
+      {
+        path: 'users',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+        Component: Users
+      },
+      {
+        path: 'users2',
+        // element: <Suspense fallback="Data is loading">
+        //   <Users2 users2dataPromise={users2dataPromise}></Users2>
+        // </Suspense>,
+      }
     ]
   },
 ]);

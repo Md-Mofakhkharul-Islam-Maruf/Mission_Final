@@ -7,8 +7,8 @@ const Headers = () => {
         <div>
             <nav className='nav'> 
                 <NavLink to='/'>Home</NavLink>
-                <NavLink to='/mobiles'>Mobile</NavLink>
-                <NavLink to='/laptops'>Laptop</NavLink>
+                <NavLink to='/users'>users</NavLink>
+                <NavLink to='/users2'>user2</NavLink>
             </nav>
         </div>
     );
