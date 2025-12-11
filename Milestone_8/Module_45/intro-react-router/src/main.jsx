@@ -37,12 +37,12 @@ const router = createBrowserRouter([
       },
       {
         path: 'posts',
-        loader : ()=>fetch('https://jsonplaceholder.typicode.com/posts'),
+        loader: () => fetch('https://jsonplaceholder.typicode.com/posts'),
         Component: Posts
       },
       {
         path: `posts/:postId`,
-        loader : ({params})=>fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        loader: ({ params }) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
         Component: PostDetails
       }
     ]
