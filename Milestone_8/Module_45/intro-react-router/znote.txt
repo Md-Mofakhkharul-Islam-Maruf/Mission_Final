@@ -19,3 +19,4 @@ In this video i load data with suspense and without suspense and do a great thin
 create a dynamic path
 
 /////45-6 Explore Dynamic Route , Params & load Data based on dynamic route
+go dynamic route, usage of params 
