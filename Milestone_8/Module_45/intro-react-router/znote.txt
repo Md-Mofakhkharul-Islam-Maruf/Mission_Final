@@ -13,3 +13,9 @@ All routing will always manage is main.jsx
 
 //////45-4 Multiple ways to load data using loader and useLoaderData
 In this video i load data with suspense and without suspense and do a great thing that is when we want to go any route in that time the necessary data will loaded.
+
+
+//////45-5 params ,create dynamic path and render Dynamic Route
+create a dynamic path
+
+/////45-6 Explore Dynamic Route , Params & load Data based on dynamic route

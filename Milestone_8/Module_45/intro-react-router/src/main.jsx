@@ -7,6 +7,7 @@ import Home from './components/home/Home.jsx';
 import Root from './components/root/Root.jsx';
 import Users from './components/users/Users.jsx';
 import Users2 from './components/users2/Users2.jsx';
+import UserDetails from './components/userDetails/UserDetails.jsx';
 const users2dataPromise = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
 
 const router = createBrowserRouter([
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
         element: <Suspense fallback="Data is loading">
           <Users2 users2dataPromise={users2dataPromise}></Users2>
         </Suspense>,
+      },
+      {
+        path: `users/:userId`,
+        Component: UserDetails
+
       }
     ]
   },
