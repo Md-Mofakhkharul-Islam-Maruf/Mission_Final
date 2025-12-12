@@ -25,3 +25,6 @@ go dynamic route, usage of params
 
 /////45-7 Explore hooks useNavigate and useNavigator for router spinner
 usage of simple useNavigate(), useNavigating(), useParams etc
+
+
+////////45-8 Load data in the component without route and Not Found 404 route
