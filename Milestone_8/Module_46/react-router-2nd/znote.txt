@@ -11,3 +11,7 @@ controlled and uncontrolled input field data taken
 
 ////46-4 Use Custom hook to reduce duplication of the code
 create custom Hook but ami bujhi nai
+
+
+/////46-5 Create Product form and collect product data
+create a product form
