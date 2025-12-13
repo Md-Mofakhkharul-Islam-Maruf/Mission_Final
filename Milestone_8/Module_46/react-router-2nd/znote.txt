@@ -1,2 +1,5 @@
 //////////46-1 Access form data using onSubmit and e target
 onSubmit the form, prevent default behavior, access form value
+
+//////46-2 use form action formData and controlled component
+different way to take form value and added onchange functionality in password field

@@ -1,23 +1,17 @@
 
 import './App.css'
+import ControlledField from './components/controlledField/ControlledField'
+import FormAction from './components/formAction/FormAction'
+import SimpleForm from './components/simpleForm/SimpleForm'
 
 function App() {
 
-  const handleForm =(e)=>{
-    console.log('form Submitted')
-    e.preventDefault()
-    const name = e.target.name.value
-    const email = e.target.email.value
-    console.log(name, email)    
-  }
+  
   return (
     <>
-      <form onSubmit={handleForm}>
-        <input type="text" name="name" placeholder='Your Name' id="" />
-        <br />
-        <input type="email" name="email" placeholder='Your Email' id="" /><br />
-        <input type="submit" value="Submit" />
-      </form>
+      {/* <SimpleForm></SimpleForm> */}
+      {/* <FormAction></FormAction> */}
+      <ControlledField></ControlledField>
     </>
   )
 }
