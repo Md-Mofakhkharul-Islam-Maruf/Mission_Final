@@ -1,0 +1,2 @@
+//////////46-1 Access form data using onSubmit and e target
+onSubmit the form, prevent default behavior, access form value
