@@ -7,3 +7,7 @@ different way to take form value and added onchange functionality in password fi
 
 ////////46-3 controlled and uncontrolled ways to collect form data
 controlled and uncontrolled input field data taken
+
+
+////46-4 Use Custom hook to reduce duplication of the code
+create custom Hook but ami bujhi nai
