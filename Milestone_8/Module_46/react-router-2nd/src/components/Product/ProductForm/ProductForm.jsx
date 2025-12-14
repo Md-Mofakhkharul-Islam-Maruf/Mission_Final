@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const ProductForm = ({handleAddProduct}) => {
+const ProductForm = ({ handleAddProduct }) => {
+
+    const [error, setError] = useState('')
+
 
     const handleSubmit = (e) => {
 
@@ -12,16 +15,35 @@ const ProductForm = ({handleAddProduct}) => {
         const Product = {
             name, price, quantity
         }
+
+        if (name.length < 1) {
+            setError('enter Product name')
+            return
+        }
+        else if (price.length < 1) {
+            setError('Price must be greater')
+            return
+        }
+        else if (quantity.length === 0) {
+            setError('Must have a Quantity')
+            return
+        }
+        else {
+            setError('')
+        }
+
+
         handleAddProduct(Product)
     }
     return (
         <div>
             <form action="" onSubmit={handleSubmit}>
-                <input type="name" name="name" id="" placeholder='name' required /><br />
-                <input type="price" name="price" id="" placeholder='price' required /><br />
-                <input type="quantity" name="quantity" placeholder='quantity' id="" required /><br />
+                <input type="name" name="name" id="" placeholder='name'  /><br />
+                <input type="price" name="price" id="" placeholder='price'  /><br />
+                <input type="quantity" name="quantity" placeholder='quantity' id=""  /><br />
                 <input type="submit" name="email" id="" value='submit' />
             </form>
+            <p style={{color: 'red'}}>{error}</p>
         </div>
     );
 };

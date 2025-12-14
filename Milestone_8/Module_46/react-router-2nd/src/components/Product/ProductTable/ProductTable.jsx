@@ -7,7 +7,7 @@ const ProductTable = ({ product }) => {
             <table>
                 <tr>
                     <td>Product No.</td>
-                    <td>Procut name</td>
+                    <td>Product name</td>
                     <td>Product price</td>
                     <td>Product quantity</td>
                 </tr>
