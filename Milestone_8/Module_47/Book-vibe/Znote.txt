@@ -8,3 +8,6 @@ routes setup in another page, create pages and component and setup router, Navba
 
 //////47-3 Create Banner, Load books data and show all the books
 banner create, loading books using useState and useEffect
+
+
+/////47-4 Load book details page and display
