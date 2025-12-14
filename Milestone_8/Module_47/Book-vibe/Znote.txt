@@ -1,0 +1,6 @@
+//////////47-1 Project Setup with React Router, Tailwind and Daisy UI
+create new project and setup tailwind, daisyui and react router
+
+
+///////47-2 Create Navbar for Book Vibe
+routes setup in another page, create pages and component and setup router, Navbar customize and added footer
