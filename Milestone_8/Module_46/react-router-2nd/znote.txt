@@ -27,3 +27,7 @@ prop drilling from parent to child one way
 
 ///////46-8 Introduction to Context API and simple context
 simple describe about context API
+
+
+///////46-9 Explore more context API and module summary
+Added money from money context using state
