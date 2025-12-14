@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductForm = () => {
+const ProductForm = ({handleAddProduct}) => {
 
     const handleSubmit = (e) => {
 
@@ -12,7 +12,7 @@ const ProductForm = () => {
         const Product = {
             name, price, quantity
         }
-        console.log(Product)
+        handleAddProduct(Product)
     }
     return (
         <div>
