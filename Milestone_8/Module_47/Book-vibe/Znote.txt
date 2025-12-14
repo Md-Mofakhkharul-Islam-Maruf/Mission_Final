@@ -11,3 +11,8 @@ banner create, loading books using useState and useEffect
 
 
 /////47-4 Load book details page and display
+fetch book and show in ui
+
+
+//////////47-5 Polishing the product card and adding React Icons
+polish books card
