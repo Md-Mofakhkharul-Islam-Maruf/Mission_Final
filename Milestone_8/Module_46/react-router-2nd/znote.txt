@@ -18,4 +18,8 @@ create a product form
 
 
 ///////46-6 Display form data in a table and form error handle
-showing product data from child to parent to sibling through state and eventHandler,
+showing product data from child to parent to sibling through state and eventHandler, simple form validation 
+
+
+/////46-7 Create a Family Component Tree structure
+prop drilling from parent to child one way
