@@ -37,3 +37,7 @@ show read list book from localstorage
 
 ////47-10 Implement sort functionality and Homework
 sorted by pages and ratings
+
+
+////47-11 Deploy on Netlify and Surge
+sweet alert and toastify install and host on surge and Netlify
