@@ -24,3 +24,7 @@ dynamic routes through individuals card
 
 ///////47-7 params, useParams hook and fetching data dynamically with id
 useParams(), useLoaderData(),  fetch data and find actual book details
+
+
+///////47-8 Store wishlist books to Local Storage and show toast alert
+added bookid to localstorge to show mark as read,
