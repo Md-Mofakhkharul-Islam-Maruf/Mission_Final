@@ -1,4 +1,4 @@
-//////////47-1 Project Setup with React Router, Tailwind and Daisy UI
+///////47-1 Project Setup with React Router, Tailwind and Daisy UI
 create new project and setup tailwind, daisyui and react router
 
 
@@ -6,13 +6,21 @@ create new project and setup tailwind, daisyui and react router
 routes setup in another page, create pages and component and setup router, Navbar customize and added footer
 
 
-//////47-3 Create Banner, Load books data and show all the books
+///////47-3 Create Banner, Load books data and show all the books
 banner create, loading books using useState and useEffect
 
 
-/////47-4 Load book details page and display
+///////47-4 Load book details page and display
 fetch book and show in ui
 
 
-//////////47-5 Polishing the product card and adding React Icons
+///////47-5 Polishing the product card and adding React Icons
 polish books card
+
+
+///////47-6 Implement dynamic routes
+dynamic routes through individuals card
+
+
+///////47-7 params, useParams hook and fetching data dynamically with id
+useParams(), useLoaderData(),  fetch data and find actual book details
