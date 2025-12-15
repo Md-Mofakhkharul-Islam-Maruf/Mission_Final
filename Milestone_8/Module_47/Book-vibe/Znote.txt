@@ -28,3 +28,7 @@ useParams(), useLoaderData(),  fetch data and find actual book details
 
 ///////47-8 Store wishlist books to Local Storage and show toast alert
 added bookid to localstorge to show mark as read,
+
+
+///////47-9 Nested layout setup with react tabs
+show read list book from localstorage

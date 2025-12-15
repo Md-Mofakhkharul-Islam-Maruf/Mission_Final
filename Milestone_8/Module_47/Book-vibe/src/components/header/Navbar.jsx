@@ -5,6 +5,7 @@ const Navbar = () => {
     const li = <>
         <Link to='/' className='mx-2'>Home</Link>
         <Link to='' className='mx-2'>About</Link>
+        <Link to='/readList' className='mx-2'>Read List</Link>
     </>
     return (
         <div className="navbar bg-base-100 shadow-sm">

@@ -24,4 +24,4 @@ const addToStoreDB = (bookId) => {
         localStorage.setItem('readList', data)
     }
 }
-export {addToStoreDB}
+export {addToStoreDB, getStoredBook}
